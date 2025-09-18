@@ -1,0 +1,13 @@
+name: README Change Trigger
+
+on:
+  push:
+    paths:
+      - 'README.md'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo README change
+        run: echo "README.md was updated and pushed!"
